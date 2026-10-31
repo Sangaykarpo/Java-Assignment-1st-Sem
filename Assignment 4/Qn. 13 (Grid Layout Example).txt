@@ -1,0 +1,22 @@
+
+import javax.swing.*;
+import java.awt.*;
+
+public class GridLayoutExample {
+    public static void main(String[] args) {
+        JFrame f = new JFrame("GridLayout Example");
+
+        f.setLayout(new GridLayout(2, 3));
+
+        f.add(new JButton("Button 1"));
+        f.add(new JButton("Button 2"));
+        f.add(new JButton("Button 3"));
+        f.add(new JButton("Button 4"));
+        f.add(new JButton("Button 5"));
+        f.add(new JButton("Button 6"));
+
+        f.setSize(400, 200);
+        f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        f.setVisible(true);
+    }
+}
