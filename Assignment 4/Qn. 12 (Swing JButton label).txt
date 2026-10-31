@@ -1,0 +1,30 @@
+
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.*;
+
+public class SwingButtonLabel {
+    public static void main(String[] args) {
+        JFrame f = new JFrame("Button and Label Example");
+
+        JLabel label = new JLabel("Welcome to Java");
+        JButton button = new JButton("Click Me");
+
+        label.setBounds(100, 50, 200, 30);
+        button.setBounds(100, 100, 120, 30);
+
+        button.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                label.setText("Button Pressed");
+            }
+        });
+
+        f.add(label);
+        f.add(button);
+
+        f.setSize(350, 220);
+        f.setLayout(null);
+        f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        f.setVisible(true);
+    }
+}
